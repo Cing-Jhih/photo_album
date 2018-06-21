@@ -1,6 +1,12 @@
-<%= @photo.title %>
-<%= @photo.date %>
-<%= image_tag @photo.file_location %>
-<%= simple_format(@photo.description) %>
+<%= image_tag @photo.file_location, size: "140x140", class: "img-thumbnail" %>
+  <div>
+    <h3><strong><%= @photo.title %></strong></h3>
+  </div>
+  <div>
+    <%= @photo.date %>
+  </div>
+  <div>
+    <h5><%= simple_format(@photo.description) %></h5>
+  </div>
 
 <%= link_to "Back to index", photos_path %>
